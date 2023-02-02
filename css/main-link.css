@@ -23,7 +23,7 @@
     opacity: .4;
 }
 
-@media screen and (max-width: 540px ) {
+@media screen and (max-width: 560px ) {
     .main-link {
         padding: 10px 24px;
         font-size: 12px;

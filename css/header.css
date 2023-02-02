@@ -62,7 +62,7 @@
     }
 }
 
-@media screen and (max-width: 540px ) {
+@media screen and (max-width: 560px ) {
 
     .header__logo {
         width: 80px;

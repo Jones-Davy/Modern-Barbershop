@@ -1,0 +1,34 @@
+.hero {
+    padding: 62px 0;
+}
+
+.hero__title {
+    font-weight: 400;
+    font-size: 54px;
+    text-transform: uppercase;
+    max-width: 904px;
+    margin: 0 0 36px;
+}
+
+@media screen and (max-width: 768px ) {
+    .hero {
+        padding: 40px 0;
+    }
+
+    .hero__title {
+        font-size: 35px;
+        margin-bottom: 24px;
+    }
+}
+
+@media screen and (max-width: 560px ) {
+    .hero {
+        padding: 32px 0;
+    }
+
+    .hero__title {
+        font-size: 24px;
+        margin-bottom: 16px;
+        max-width: 420px;
+    }
+}

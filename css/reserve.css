@@ -54,3 +54,60 @@
 .reserve__fieldset:last-child {
     margin-bottom: 0px;
 }
+
+@media (max-width: 768px) {
+    .reserve {
+      padding: 40px 0 80px;
+    }
+  
+    .reserve__title {
+      font-size: 32px;
+    }
+  
+    .reserve__list {
+      margin-bottom: 40px;
+    }
+  
+    .reserve__form-container {
+      margin-bottom: 32px;
+    }
+  
+    .reserve__fieldset {
+      margin-bottom: 40px;
+    }
+  
+    .reserve__legend {
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+    
+      .reserve__fieldset_sub {
+        margin-bottom: 20px;
+      }
+    }
+    
+    @media (max-width: 540px) {
+      .reserve {
+        padding: 32px 0 64px;
+      }
+    
+      .reserve__title {
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+    
+      .reserve__list {
+        padding-left: 18px;
+        margin-bottom: 32px;
+        font-size: 12px;
+        line-height: 1.2;
+      }
+    
+      .reserve__form-container {
+        margin-bottom: 24px;
+      }
+    
+      .reserve__fieldset {
+        margin-bottom: 32px;
+      }
+    }

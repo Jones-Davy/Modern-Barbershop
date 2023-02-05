@@ -18,15 +18,16 @@
 .about__list {
     margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 384px);
-    gap: 24px 32px;
+    grid-template-columns: repeat(auto-fill, minmax(384px, 1fr));
+    gap: 24px;
 }
 
 .about__item {
-    padding: 6px 6px 6px 96px;
+    padding: 6px 0 6px 96px;
     background-position: left;
     background-repeat: no-repeat;
     background-size: 80px;
+    min-height: 80px;
 }
 
 .about__item_profi {
@@ -52,4 +53,73 @@
 .about__description {
     margin: 0;
     line-height: 1.3;
+}
+
+@media screen and (max-width: 1024px ) {
+    .about__description {
+        margin-bottom: 46px;
+    }
+
+    .about__list {
+        grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    }
+
+    .about__item {
+        padding-top: 96px;
+        background-position: left top;
+        padding-left: 0;
+    }
+}
+
+@media screen and (max-width: 768px ) {
+    .about {
+        padding: 40px 0;
+    }
+
+    .about__title {
+        margin-bottom: 24px;
+    }
+
+    .about__description {
+        margin-bottom: 32px;
+    }
+
+    .about__list {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+
+    .about__item {
+        padding-left: 96px;
+        padding-top: 0;
+        background-position: left;
+    }
+
+    .about__item-description {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 560px ) {
+    .about {
+        padding: 32px 0;
+      }
+    
+      .about__list {
+        grid-template-columns: 272px;
+      }
+    
+      .about__title {
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+    
+      .about__description {
+        font-size: 12px;
+      }
+    
+      .about__item {
+        padding-left: 72px;
+        min-height: 64px;
+        background-size: 64px;
+      }
 }

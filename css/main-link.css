@@ -9,6 +9,7 @@
     text-transform: uppercase;
     transition: all .3s ease-in-out;
     cursor: pointer;
+    border: none;
 }
 
 .main-link:hover:not(:disabled) {

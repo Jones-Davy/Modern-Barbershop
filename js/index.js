@@ -7,17 +7,23 @@ const removePreload = elem => {
 }
 
 const startSlider = (slider) => {
-    removePreload(slider)
+    
 }
 
 const initSlider = () => {
     const slider = document.querySelector('.slider')
+    const sliderContainer = document.querySelector('.slider__container')
 
+    sliderContainer.style.display = 'none'
     addPreload(slider)
 
     window.addEventListener('load', () => {
+        sliderContainer.style.display = ''
+
+        removePreload(slider)
         startSlider(slider)
+    
     })
 }
 
-initSlider()
+window.addEventListener('DOMContentLoaded', initSlider)

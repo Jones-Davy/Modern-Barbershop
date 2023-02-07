@@ -1,3 +1,4 @@
+const API_URL = 'https://educated-kindly-paddleboat.glitch.me/api';
 
 const addPreload = elem => {
     elem.classList.add('preload')
@@ -89,6 +90,41 @@ const initSlider = () => {
     })
 }
 
+const renderPrice = (wrapper, data) => {
+    data.forEach(item => {
+        const priceItem = document.createElement('li')
+        priceItem.classList.add('price__item')
 
+        priceItem.innerHTML = `
+        <span class="price__item-title">${item.name}</span>
+        <span class="price__item-count">${item.price} руб</span>
+        `
+
+        wrapper.append(priceItem)
+    });
+}
+
+const initService = () => {
+    const priceList = document.querySelector('.price__list')
+    priceList.textContent = ''
+
+    addPreload(priceList)
+
+    fetch(API_URL)
+    .then(response => response.json())
+    .then(data => {
+        renderPrice(priceList, data)
+        removePreload(priceList)
+        return data
+    })
+ 
+}
+
+const init = () => {
+    initSlider()
+    initService()
+}
+
+init()
 
 window.addEventListener('DOMContentLoaded', initSlider)

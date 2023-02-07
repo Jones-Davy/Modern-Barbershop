@@ -1,3 +1,4 @@
+
 const addPreload = elem => {
     elem.classList.add('preload')
 }
@@ -87,5 +88,7 @@ const initSlider = () => {
     
     })
 }
+
+
 
 window.addEventListener('DOMContentLoaded', initSlider)

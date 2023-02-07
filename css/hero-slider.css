@@ -3,11 +3,8 @@
     position: relative;
 }
 
-.slider__container {
-    
-}
-
 .slider__list {
+    transition: all .3s ease-in;
     display: flex;
     margin: 0 -16px;
 }

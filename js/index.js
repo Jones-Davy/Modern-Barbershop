@@ -217,7 +217,8 @@ const initReserve = () => {
 
             const response = await fetch(`${API_URL}/api/?spec=${target.value}`)
             const data = await response.json()
-
+            
+            fieldmonth.textContent = ''
             renderMonth(fieldmonth, data)
             removePreload(fieldmonth)
             removeDisabled([fielddate, fieldmonth])

@@ -1,6 +1,5 @@
 .preload {
     position: relative;
-    min-height: 100px;
 }
 
 .preload::after {

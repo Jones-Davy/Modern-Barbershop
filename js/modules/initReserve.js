@@ -4,7 +4,8 @@ import { API_URL } from "./const.js"
 const year = new Date().getFullYear()
 
 const renderSpec = (wrapper, data) => {
-    const labels = data.map(item => {
+    let labels = []
+    labels = data.map(item => {
         const label = document.createElement('label')
         label.classList.add('radio')
         label.innerHTML = `
@@ -69,7 +70,7 @@ const renderTime = (wrapper, data) => {
 
 export const initReserve = () => {
     const reserveForm = document.querySelector('.reserve__form')
-    const {fieldspec, fielddate, fieldmonth, fieldday, fieldtime, btn} = reserveForm
+    const {fieldservice, fieldspec, fielddate, fieldmonth, fieldday, fieldtime, btn} = reserveForm
 
     addDisabled([fieldspec, fielddate, fieldmonth, fieldday, fieldtime, btn])
 
@@ -140,4 +141,46 @@ export const initReserve = () => {
             removeDisabled([btn])
         }
     })
+
+    reserveForm.addEventListener('submit', async (event) => {
+
+        event.preventDefault()
+
+        const formData = new FormData(reserveForm)
+        const json = JSON.stringify(Object.fromEntries(formData))
+        
+        const response = await fetch(`${API_URL}api/order`, {
+            method: 'post',
+            body: json,
+            headers: {
+                'Content-Type': 'application/json'
+            }
+
+        })
+
+        const data = await response.json()
+        addDisabled([
+            fieldservice,
+            fieldspec,
+            fielddate,
+            fieldmonth, 
+            fieldday, 
+            fieldtime, 
+            btn,
+        ])
+
+        const successText = document.createElement('p')
+        successText.innerHTML = `
+        Спасибо за бронь #${data.id}! <br/>
+        Ждем вас ${new Intl.DateTimeFormat('ru-RU', {
+            month: 'long',
+            day: 'numeric',
+        }).format(new Date(`${year}/${data.month}/${data.day}`))},
+        время ${data.time}
+        
+        `
+        reserveForm.append(successText)
+
+    })
 }
+

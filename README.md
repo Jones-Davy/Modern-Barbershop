@@ -9,7 +9,7 @@
    <h3><a href="https://jones-davy.github.io/Modern-Barbershop/">Сайт проекта Modern-Barbershop</a>:scissors:</h3>
   </div>
   
-  Веб-сайт для записи в барбершоп для получения парикхмахерских услуг:haircut_woman:.
+  Веб-сайт для записи в барбершоп для получения парикхмахерских услуг:haircut_woman:
   
   <div  align="center">
   <img src="https://github.com/Jones-Davy/Modern-Barbershop/blob/main/img/mainscreen.jpg"/>

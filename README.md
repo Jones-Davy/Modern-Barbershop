@@ -15,13 +15,6 @@
   <img src="https://github.com/Jones-Davy/Modern-Barbershop/blob/main/img/mainscreen.jpg"/>
 </div>
 
-<br/>
-
-
- <div align="center">
-  <img src="https://github.com/Jones-Davy/AviaOrders/blob/main/img/mainscreen-1.jpg"/>
-  <img src="https://github.com/Jones-Davy/AviaOrders/blob/main/img/mainscreen-2.jpg"/>
-</div>
 
 <br/>
 <br/>

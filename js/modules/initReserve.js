@@ -4,8 +4,7 @@ import { API_URL } from "./const.js"
 const year = new Date().getFullYear()
 
 const renderSpec = (wrapper, data) => {
-    let labels = []
-    labels = data.map(item => {
+    const labels = data.map(item => {
         const label = document.createElement('label')
         label.classList.add('radio')
         label.innerHTML = `
@@ -86,6 +85,7 @@ export const initReserve = () => {
             const response = await fetch(`${API_URL}/api/?service=${target.value}`)
             const data = await response.json()
 
+            fieldspec.textContent = ''
             renderSpec(fieldspec, data)
             removePreload(fieldspec)
             removeDisabled([fieldspec])

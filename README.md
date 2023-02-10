@@ -12,8 +12,7 @@
   Веб-сайт для записи в барбершоп для получения парикхмахерских услуг:haircut_woman:. 
   
   <div  align="center">
-  <h2>Форма регистрации пассажиров</h2>
-  <img src="https://github.com/Jones-Davy/AviaOrders/blob/main/img/form-screen.jpg"/>
+  <img src="https://github.com/Jones-Davy/Modern-Barbershop/blob/main/img/mainscreen.jpg"/>
 </div>
 
 <br/>

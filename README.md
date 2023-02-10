@@ -13,6 +13,10 @@
   
   <div  align="center">
   <img src="https://github.com/Jones-Davy/Modern-Barbershop/blob/main/img/mainscreen.jpg"/>
+   <img src="https://github.com/Jones-Davy/Modern-Barbershop/blob/main/img/mainscreen-2.jpg"/>
+  <img src="https://github.com/Jones-Davy/Modern-Barbershop/blob/main/img/mainscreen-3.jpg"/>
+  <img src="https://github.com/Jones-Davy/Modern-Barbershop/blob/main/img/mainscreen-4.jpg"/>
+
 </div>
 
 

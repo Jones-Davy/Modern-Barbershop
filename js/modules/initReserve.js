@@ -148,7 +148,7 @@ export const initReserve = () => {
 
         const formData = new FormData(reserveForm)
         const json = JSON.stringify(Object.fromEntries(formData))
-        
+    
         const response = await fetch(`${API_URL}api/order`, {
             method: 'post',
             body: json,
@@ -157,30 +157,31 @@ export const initReserve = () => {
             }
 
         })
-
+    
         const data = await response.json()
+    
         addDisabled([
-            fieldservice,
-            fieldspec,
-            fielddate,
+            fieldservice, 
+            fieldspec, 
+            fielddate, 
             fieldmonth, 
             fieldday, 
             fieldtime, 
-            btn,
-        ])
+            btn,])
 
+    
         const successText = document.createElement('p')
-        successText.innerHTML = `
-        Спасибо за бронь #${data.id}! <br/>
-        Ждем вас ${new Intl.DateTimeFormat('ru-RU', {
-            month: 'long',
-            day: 'numeric',
-        }).format(new Date(`${year}/${data.month}/${data.day}`))},
-        время ${data.time}
-        
-        `
-        reserveForm.append(successText)
 
-    })
-}
+        successText.innerHTML = `
+            Спасибо за бронь #${data.id}! <br/> 
+            Ждем вас ${new Intl.DateTimeFormat('ru-RU', {
+                month: 'long',
+                day: 'numeric',
+            }).format(new Date(year, data.month, data.day))},
+            время ${data.time}
+            `
+    
+        reserveForm.append(successText);
+      });
+    }
 

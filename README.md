@@ -33,7 +33,7 @@
   <img src="https://github.com/devicons/devicon/blob/master/icons/css3/css3-plain-wordmark.svg"  title="CSS3" alt="CSS" width="40" height="40"/>  Адаптивная вёрстка, псевдоклассы и псевдоэлементы, preload, grid, customized svg, составные селекторы и анимации.
     <br/>
     <br/>
-   <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>  Модульный подход, slider, fetch, работа с DOM, localStorage, async/await, promise, try/catch, JSON, Intl, FormData, обработка API.
+   <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="JavaScript" alt="JavaScript" width="40" height="40"/>  Модульный подход, slider, fetch, работа с DOM, async/await, promise, try/catch, JSON, Intl, FormData, обработка API.
     <br/>
     <br/>
   
